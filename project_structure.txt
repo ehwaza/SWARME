@@ -1,0 +1,76 @@
+SWARNE_V2/
+├── swarne/
+│   ├── __init__.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── bee.py                    # Bee avec génétique avancée
+│   │   ├── hive.py                   # Hive multi-symboles
+│   │   ├── guardian.py               # Risk manager amélioré
+│   │   ├── field.py                  # MT5 interface
+│   │   └── genetics.py               # Algorithmes génétiques avancés
+│   ├── backtesting/
+│   │   ├── __init__.py
+│   │   ├── engine.py                 # Moteur de backtest
+│   │   ├── data_loader.py            # Chargement données historiques
+│   │   ├── metrics.py                # Calcul métriques performance
+│   │   └── report_generator.py       # Génération rapports HTML
+│   ├── ml/
+│   │   ├── __init__.py
+│   │   ├── lstm_predictor.py         # Prédiction LSTM
+│   │   ├── feature_engineering.py    # Features pour ML
+│   │   ├── model_trainer.py          # Entraînement modèles
+│   │   └── ensemble.py               # Ensemble de modèles
+│   ├── portfolio/
+│   │   ├── __init__.py
+│   │   ├── multi_symbol_manager.py   # Gestion multi-symboles
+│   │   ├── correlation_analyzer.py   # Analyse corrélations
+│   │   └── portfolio_optimizer.py    # Optimisation portefeuille
+│   ├── dashboard/
+│   │   ├── __init__.py
+│   │   ├── main_window.py            # Fenêtre principale PyQt5
+│   │   ├── widgets/
+│   │   │   ├── swarm_viz.py          # Visualisation essaim
+│   │   │   ├── performance_chart.py  # Graphiques performance
+│   │   │   ├── metrics_panel.py      # Panel métriques
+│   │   │   └── control_panel.py      # Panel contrôle
+│   │   └── styles/
+│   │       └── dark_theme.qss        # Style sombre
+│   ├── notifications/
+│   │   ├── __init__.py
+│   │   ├── telegram_notifier.py      # Notifications Telegram
+│   │   └── email_notifier.py         # Notifications email
+│   ├── database/
+│   │   ├── __init__.py
+│   │   ├── models.py                 # Modèles SQLAlchemy
+│   │   ├── repository.py             # Accès base de données
+│   │   └── migrations/               # Migrations Alembic
+│   └── utils/
+│       ├── __init__.py
+│       ├── logger.py                 # Logging avancé
+│       ├── config.py                 # Configuration
+│       └── indicators.py             # Indicateurs techniques
+├── tests/
+│   ├── test_bee.py
+│   ├── test_hive.py
+│   ├── test_backtesting.py
+│   └── test_ml.py
+├── data/
+│   ├── historical/                   # Données historiques
+│   ├── models/                       # Modèles ML sauvegardés
+│   └── backtests/                    # Résultats backtests
+├── configs/
+│   ├── config_v2.yaml                # Config principale
+│   ├── strategies/                   # Configs stratégies
+│   └── symbols.yaml                  # Config symboles
+├── scripts/
+│   ├── run_dashboard.py              # Lancer dashboard
+│   ├── run_backtest.py               # Lancer backtest
+│   ├── train_ml_model.py             # Entraîner modèle ML
+│   └── optimize_parameters.py        # Optimiser paramètres
+├── docs/
+│   ├── API.md
+│   ├── ARCHITECTURE.md
+│   └── TUTORIAL.md
+├── requirements_v2.txt               # Nouvelles dépendances
+├── setup.py                          # Installation package
+└── README_V2.md                      # Documentation V2

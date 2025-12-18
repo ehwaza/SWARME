@@ -1,0 +1,115 @@
+# ============================================================
+# SWARNE V2.0 - CONFIGURATION PRINCIPALE
+# ============================================================
+
+# CAPITAL
+capital:
+  initial_capital: 10000.0
+  max_daily_loss_pct: 3.0
+  max_drawdown_pct: 15.0
+
+# SWARM
+swarm:
+  num_bees: 20
+  evolution_frequency: 10
+  bee_types:
+    scout: 0.20    # 20% scouts
+    worker: 0.50   # 50% workers
+    guard: 0.30    # 30% guards
+
+# GENETIC ALGORITHMS
+genetics:
+  selection_method: "tournament"  # tournament, roulette, rank
+  crossover_method: "blend"       # blend, arithmetic, uniform
+  mutation_method: "adaptive"      # adaptive, gaussian, uniform
+  
+  tournament_size: 3
+  elitism_rate: 0.1
+  crossover_rate: 0.8
+  mutation_rate: 0.1
+  
+  initial_mutation_rate: 0.3
+  final_mutation_rate: 0.05
+  
+  diversity_threshold: 0.1
+  immigration_rate: 0.05
+
+# RISK MANAGEMENT
+risk:
+  risk_per_trade_pct: 1.0
+  stop_loss_atr_multiplier: 1.5
+  take_profit_atr_multiplier: 2.5
+  min_confidence: 0.5
+  max_correlated_positions: 3
+
+# TRADING
+trading:
+  symbols: ["EURUSD", "GBPUSD", "USDJPY"]
+  timeframe: "H1"
+  commission: 0.0001  # 1 pip
+  slippage: 0.0001    # 1 pip
+
+# MACHINE LEARNING
+ml:
+  enabled: true
+  model_type: "lstm"
+  sequence_length: 60
+  lstm_units: [128, 64, 32]
+  dropout_rate: 0.2
+  training_epochs: 50
+  batch_size: 32
+  
+  # Features
+  features:
+    - close
+    - volume
+    - ema_9
+    - ema_21
+    - adx
+    - rsi
+    - atr
+    - macd
+
+# NOTIFICATIONS
+notifications:
+  telegram:
+    enabled: false
+    bot_token: "YOUR_BOT_TOKEN"
+    chat_id: "YOUR_CHAT_ID"
+  
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    from_email: "swarne@example.com"
+    to_email: "trader@example.com"
+    password: "YOUR_PASSWORD"
+
+# BACKTESTING
+backtesting:
+  start_date: "2023-01-01"
+  end_date: "2024-12-16"
+  walk_forward:
+    enabled: true
+    train_period_days: 180
+    test_period_days: 60
+
+# DASHBOARD
+dashboard:
+  enabled: true
+  update_interval_ms: 1000
+  theme: "dark"
+
+# LOGGING
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  file: "swarne_v2.log"
+  max_size_mb: 100
+  backup_count: 5
+
+# DATABASE
+database:
+  enabled: false
+  type: "sqlite"  # sqlite, postgresql, mongodb
+  path: "swarne_v2.db"
+  connection_string: ""

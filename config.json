@@ -1,0 +1,127 @@
+{
+  "system": {
+    "name": "SWARNE! - The Hive",
+    "version": "1.0.0",
+    "description": "Système d'essaim de trading algorithmique"
+  },
+  
+  "capital": {
+    "initial_capital": 10000.0,
+    "currency": "USD",
+    "max_daily_loss_pct": 3.0,
+    "max_drawdown_pct": 15.0
+  },
+  
+  "swarm": {
+    "num_bees": 20,
+    "bee_distribution": {
+      "scouts": 0.20,
+      "workers": 0.50,
+      "guards": 0.30
+    },
+    "evolution_frequency": 10,
+    "mutation_rate": 0.1,
+    "elimination_rate": 0.25
+  },
+  
+  "trading": {
+    "symbol": "EURUSD",
+    "timeframe": "M15",
+    "max_open_positions": 5,
+    "max_positions_per_bee": 1
+  },
+  
+  "risk_management": {
+    "risk_per_trade_pct": 1.0,
+    "stop_loss_atr_multiplier": 1.5,
+    "take_profit_atr_multiplier": 2.5,
+    "min_confidence": 0.5,
+    "max_leverage": 10
+  },
+  
+  "strategy_parameters": {
+    "ema": {
+      "fast_min": 5,
+      "fast_max": 20,
+      "fast_default": 9,
+      "slow_min": 15,
+      "slow_max": 50,
+      "slow_default": 21
+    },
+    "adx": {
+      "period_min": 10,
+      "period_max": 20,
+      "period_default": 14,
+      "threshold_min": 15.0,
+      "threshold_max": 40.0,
+      "threshold_default": 25.0
+    },
+    "rsi": {
+      "period_min": 10,
+      "period_max": 20,
+      "period_default": 14,
+      "overbought_default": 70.0,
+      "oversold_default": 30.0
+    },
+    "atr": {
+      "period_default": 14
+    }
+  },
+  
+  "execution": {
+    "max_cycles": 1000,
+    "cycle_interval_seconds": 60,
+    "trade_timeout_seconds": 300,
+    "slippage_pips": 2
+  },
+  
+  "logging": {
+    "level": "INFO",
+    "file": "swarne_hive.log",
+    "max_bytes": 10485760,
+    "backup_count": 5,
+    "console_output": true
+  },
+  
+  "alerts": {
+    "enabled": true,
+    "channels": ["console", "file"],
+    "telegram": {
+      "enabled": false,
+      "bot_token": "YOUR_BOT_TOKEN",
+      "chat_id": "YOUR_CHAT_ID"
+    },
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "username": "your_email@gmail.com",
+      "password": "your_password",
+      "to_address": "your_email@gmail.com"
+    }
+  },
+  
+  "metatrader": {
+    "terminal_path": "C:\\Program Files\\MetaTrader 5\\terminal64.exe",
+    "login": null,
+    "password": null,
+    "server": null,
+    "magic_number": 123456
+  },
+  
+  "backtesting": {
+    "enabled": false,
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "initial_balance": 10000.0,
+    "spread": 2
+  },
+  
+  "advanced": {
+    "multithreading": false,
+    "gpu_acceleration": false,
+    "save_state_interval": 100,
+    "auto_restart_on_error": true,
+    "emergency_stop_loss_pct": 5.0
+  }
+}
